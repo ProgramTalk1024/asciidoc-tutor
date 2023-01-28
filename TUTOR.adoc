@@ -1,0 +1,98 @@
+= 这是文档主标题: 副标题
+// :author: ProgramTalk
+// :email: ProgramTalk@163.com
+// 多个作者
+// :author_1: ProgramTalk
+// :email_1: ProgramTalk@163.com
+// :author_2: ProgramTalk2
+// :email_2: ProgramTalk2@163.com
+//使用一行来设置
+ProgramTalk <ProgramTalk@163.com>; ProgramTalk2 <ProgramTalk2@163.com>
+// 设置修订信息
+// :revdate: April 4, 2022
+// :revnumber: LPR55
+// :revremark: The spring incarnation of {doctitle}
+// :version-label!:
+LPR55 April 4, 2022: The spring incarnation of {doctitle}
+//空属性值，会使用默认值
+:toc:
+// 也可以不用默认值（doctype的默认值是article），设置为book
+:doctype: book
+// :description: AsciiDoc教程
+// :!description:
+:description: A story chronicling the inexplicable \
+hazards and unique challenges a team must vanquish \
+on their journey to finding an open source \
+project's true power.
+:!sectnums:
+
+....
+AsciiDoc是一种比Markdown功能更加丰富的文档，用其编写技术文档尤为合适，[Spring官网](https://spring.io)的很多文档都是使用其编写的。
+....
+
+
+////
+使用////来作为首位标记，实现评论块，评论块不会在页面等上面展示出来
+////
+
+////
+样例块
+////
+====
+使用====作为前后标记实现样例块
+====
+
+////
+样例块，换行
+////
+====
+使用====作为前后标记实现样例块
+
+换行需要空一整行来实现
+====
+
+----
+使用----作为前后标记实现清单块
+----
+
+
+....
+// 使用....作为前后标记实现排版（literal）块
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
+}
+....
+
+
+[example]
+使用====作为前后标记实现样例块
+
+////
+向块添加标题
+////
+
+.example标题
+====
+example
+====
+
+
+[#blockId1]
+====
+Content of delimited example block
+====
+
+点击<<blockId1>>，查看内容
+
+{doctitle} 标题被成功引入
+
+
+// 文章标题和级别
+= 一级标题
+== 二级标题
+=== 三级标题
+==== 四级标题
+===== 五级标题
+====== 六级标题
