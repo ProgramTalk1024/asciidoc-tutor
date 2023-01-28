@@ -1,6 +1,6 @@
 ![](https://itlab1024-1256529903.cos.ap-beijing.myqcloud.com/202301251143816.png)
 
-# AsciiDoc的文档使用基本教程
+# AsciiDoc使用基本教程
 ![](https://itlab1024-1256529903.cos.ap-beijing.myqcloud.com/202301281504444.png)
 
 AsciiDoc是一种比Markdown功能更加丰富的文档，用其编写技术文档尤为合适，[Spring官网](https://spring.io)的很多文档都是使用其编写的。
