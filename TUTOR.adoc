@@ -15,7 +15,7 @@ ProgramTalk <ProgramTalk@163.com>; ProgramTalk2 <ProgramTalk2@163.com>
 // :version-label!:
 LPR55 April 4, 2022: The spring incarnation of {doctitle}
 //空属性值，会使用默认值
-:toc:
+// :toc:
 // 也可以不用默认值（doctype的默认值是article），设置为book
 :doctype: book
 // :description: AsciiDoc教程
@@ -25,6 +25,8 @@ hazards and unique challenges a team must vanquish \
 on their journey to finding an open source \
 project's true power.
 :!sectnums:
+// 全局设置保留文本换行符
+:hardbreaks-option:
 
 ....
 AsciiDoc是一种比Markdown功能更加丰富的文档，用其编写技术文档尤为合适，[Spring官网](https://spring.io)的很多文档都是使用其编写的。
@@ -90,9 +92,60 @@ Content of delimited example block
 
 
 // 文章标题和级别
+
 = 一级标题
 == 二级标题
 === 三级标题
 ==== 四级标题
 ===== 五级标题
 ====== 六级标题
+
+// 段落
+第一行
+
+第二行
+
+第一行 , +
+第二行
+
+[%hardbreaks]
+11
+4
+5
+6
+6
+
+01
+02
+03
+
+[.text-center]
+This text is centered, so it must be important.
+
+****
+这是一个块
+
+[discrete]
+== Discrete Heading
+
+这是一个块
+****
+
+// 打断,分割线
+'''
+---
+***
+
+<<<
+
+分页符后面的内容
+
+// 文本格式
+A bold *word*, and a bold *phrase of text*.
+
+Bold c**hara**cter**s** within a word.
+
+
+An italic _word_, and an italic _phrase of text_.
+
+Italic c__hara__cter__s__ within a word.

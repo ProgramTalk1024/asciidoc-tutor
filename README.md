@@ -373,3 +373,115 @@ project's true power.
 
 ![image-20230128175308347](https://itlab1024-1256529903.cos.ap-beijing.myqcloud.com/202301281753416.png)
 
+# 段落
+## 换行
+可以使用空行，但是页面上也会显示空行
+```asciidoc
+// 段落
+第一行
+
+第二行
+```
+效果图：
+![](https://itlab1024-1256529903.cos.ap-beijing.myqcloud.com/202301291000325.png)
+
+也可以使用+放到文字末尾，这样就不会出现空行
+```asciidoc
+第一行 , +
+第二行
+```
+效果图：
+![](https://itlab1024-1256529903.cos.ap-beijing.myqcloud.com/202301291001967.png)
+
+也可以使用`[%hardbreaks]`来标记，下面的文字保留换行符
+```asciidoc
+[%hardbreaks]
+11
+4
+5
+6
+6
+```
+
+效果图：
+![](https://itlab1024-1256529903.cos.ap-beijing.myqcloud.com/202301291004112.png)
+
+保留换行符也可以全局设置，通过属性`:hardbreaks-option:`
+```asciidoc
+// 全局设置保留文本换行符
+:hardbreaks-option:
+```
+此时再看如下文本的效果
+```asciidoc
+01
+02
+03
+```
+效果图：
+![](https://itlab1024-1256529903.cos.ap-beijing.myqcloud.com/202301291006942.png)
+
+## 对齐方式
+对齐方式在段落文字上方使用`[text-<alignment>]`来实现，比如剧中对齐
+```asciidoc
+[.text-center]
+This text is centered, so it must be important.
+```
+效果图：
+![](https://itlab1024-1256529903.cos.ap-beijing.myqcloud.com/202301291009183.png)
+## 离散标题
+离散标题并不是文章结构的一部分，他可能是块中的一个标题。使用`[discrete]`来标记。
+```asciidoc
+**** 
+这是一个块
+
+[discrete]
+== Discrete Heading
+
+这是一个块
+****
+```
+效果图：
+![](https://itlab1024-1256529903.cos.ap-beijing.myqcloud.com/202301291012144.png)
+可以看到在块中有一个一级标题。
+## 打断
+**分割线**的使用跟markdown类似，使用`'''`或者`---`或者`***`来实现，中间可以有空格。
+```asciidoc
+// 打断,分割线
+'''
+---
+***
+```
+效果图如下：
+![](https://itlab1024-1256529903.cos.ap-beijing.myqcloud.com/202301291016856.png)
+
+**分页符**使用`<<<`来定义，他只对打印有效。也就是说分页符后面的内容会单独另起一页。
+```asciidoc
+
+<<<
+
+分页符后面的内容
+```
+效果图：
+![](https://itlab1024-1256529903.cos.ap-beijing.myqcloud.com/202301291019563.png)
+
+# 文本格式
+## 加粗
+文本加粗分为两种情况，如果文字是有边界的（前后有空格），则前后使用一个`*`包裹即可，如果不是有边界的，则使用双`*`包裹。
+```asciidoc
+A bold *word*, and a bold *phrase of text*.
+
+Bold c**hara**cter**s** within a word.
+```
+效果图：
+![](https://itlab1024-1256529903.cos.ap-beijing.myqcloud.com/202301291023486.png)
+
+## 斜体
+有边界文字前后使用单`_`包裹，无边界使用`__`包裹。
+```asciidoc
+An italic _word_, and an italic _phrase of text_.
+
+Italic c__hara__cter__s__ within a word.
+```
+效果图：
+![](https://itlab1024-1256529903.cos.ap-beijing.myqcloud.com/202301291026642.png)
+
